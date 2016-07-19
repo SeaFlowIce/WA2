@@ -63,7 +63,7 @@ public class Wa2Activity extends AppCompatActivity {
             tabLayout.addTab(tabLayout.newTab().setText("丸户老贼"));
             tabLayout.addTab(tabLayout.newTab().setText("白学"));
         }else{
-            //TODO 不知道为何setSelected不起作用
+            //TODO setSelected和setCurrentItem缺一不可
             switch (position){
                 case 2:
                     Log.e("tabLayout","addTab"+position);
@@ -88,6 +88,7 @@ public class Wa2Activity extends AppCompatActivity {
         }
 
         tabLayout.setupWithViewPager(mViewPager);
+        mViewPager.setCurrentItem(position-2);
     }
 
     private void setupViewPager(ViewPager mViewPager,Integer position) {
@@ -103,6 +104,7 @@ public class Wa2Activity extends AppCompatActivity {
         }
 
         mViewPager.setAdapter(adapter);
+
     }
 
     private String getAsset(String fileName) {
