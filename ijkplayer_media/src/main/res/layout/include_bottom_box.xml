@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rl_huplayer_bottom_box"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:padding="8dp"
+	android:visibility="visible"
+	android:background="@color/huplayer_navigationbar">
+
+	<ImageView
+		android:id="@+id/img_huplayer_play"
+		android:layout_width="30dp"
+		android:layout_height="30dp"
+		android:layout_centerVertical="true"
+		android:src="@drawable/bili_player_play_can_play"
+		android:padding="8dp"/>
+
+	<TextView
+		android:text="00:00"
+		android:id="@+id/tv_huplayer_currentTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="5dp"
+		android:layout_toRightOf="@+id/img_huplayer_play"
+		android:textColor="@android:color/white"
+		android:textSize="13dp"/>
+
+	<SeekBar
+		android:id="@+id/sb_huplayer_seek"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_toLeftOf="@+id/tv_huplayer_endTime"
+		android:layout_toRightOf="@+id/tv_huplayer_currentTime"
+		android:progressDrawable="@drawable/huplayer_seek_progress"
+		android:thumb="@drawable/huplayer_seek_thumb"
+		android:minHeight="4dp"
+		android:maxHeight="5dp"
+		android:layout_weight="1.0"
+		android:paddingTop="8dp"
+		android:paddingBottom="8dp"/>
+
+	<TextView
+		android:id="@+id/tv_huplayer_endTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_toLeftOf="@+id/img_huplayer_fullscreen"
+		android:text="00:00"
+		android:textColor="@android:color/white"
+		android:textSize="13dp"/>
+
+	<ImageView
+		android:layout_centerVertical="true"
+		android:id="@+id/img_huplayer_fullscreen"
+		android:layout_alignParentRight="true"
+		android:src="@drawable/ic_fullscreen_white_24dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="4dp"
+		android:layout_marginLeft="5dp"
+		android:scaleType="center"/>
+
+</RelativeLayout>
+

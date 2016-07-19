@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WA2</string>
+
+    <string name="name_wa2">WHITE ALBUM 2</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="press_again_exit_app">再按一次退出程序</string>
+
+    <string name="navigation_wa2">白色相簿2</string>
+    <string name="navigation_about">作品相关</string>
+
+    <string name="loading">加载中…</string>
+
+    <string name="app_description">本APP所用图片与资源均来源于个人收藏，为个人爱好，私下交流所用，不以盈利为目得。</string>
+    <string name="app_download_url">白色相簿2三合一硬盘版及其他资源下载地址：\n链接: http://pan.baidu.com/s/1hrTEVJI \n密码: 5j8i \n解压密码：White Album 2\n如果链接失效请私信本人百度账号liu294593087\n希望大家都能早日脱宅！\n仅以此作品致白学家们！233~~~</string>
+
+</resources>

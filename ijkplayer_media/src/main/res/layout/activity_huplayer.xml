@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/app_video_box"
+	android:background="#000"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<tv.danmaku.ijk.media.widget.IjkVideoView
+		android:id="@+id/video_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:visibility="invisible"/>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="0px">
+
+		<include
+			layout="@layout/include_top_box"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+		</include>
+
+		<include
+			layout="@layout/include_center_box"
+			android:layout_width="match_parent"/>
+
+		<LinearLayout
+			android:id="@+id/app_video_status"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@android:color/background_dark"
+			android:gravity="center"
+			android:visibility="visible">
+
+			<TextView
+				android:id="@+id/app_video_status_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="出现了小问题"
+				android:textColor="@android:color/white"
+				android:textSize="14dp"/>
+
+		</LinearLayout>
+
+		<include
+			layout="@layout/include_bottom_box"
+			android:layout_width="match_parent"/>
+
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginTop="0px"
+		android:gravity="center"
+		android:background="#000000"
+		android:id="@+id/rl_huplayer_root_cover"
+		android:visibility="gone">
+
+		<ImageView
+			android:layout_height="match_parent"
+			android:layout_width="match_parent"
+			android:id="@+id/img_huplayer_cover"/>
+
+	</RelativeLayout>
+
+	<ProgressBar
+		android:id="@+id/pb_huplayer_loading"
+		android:layout_width="28dp"
+		android:layout_height="28dp"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:indeterminateDrawable="@drawable/huplayer_video_loading"
+		android:visibility="visible"/>
+
+	<ImageView
+		android:id="@+id/img_huplayet_start"
+		android:layout_width="60dp"
+		android:layout_height="60dp"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:layout_gravity="center_vertical"
+		android:src="@drawable/huplayer_click_video_play_selector"/>
+
+</RelativeLayout>
+

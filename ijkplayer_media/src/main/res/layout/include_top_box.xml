@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/ll_huplayer_top_box"
+	android:orientation="horizontal"
+	android:gravity="center_vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/huplayer_navigationbar">
+
+	<ImageView
+		android:id="@+id/img_huplayer_back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/bili_player_back_button"
+		android:padding="16dp"/>
+
+	<TextView
+		android:id="@+id/tv_huplayer_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ellipsize="marquee"
+		android:singleLine="true"
+		android:textColor="@android:color/white"
+		android:textSize="14dp"
+		android:visibility="visible"
+		android:paddingTop="14dp"
+		android:paddingBottom="14dp"/>
+
+</LinearLayout>
+
