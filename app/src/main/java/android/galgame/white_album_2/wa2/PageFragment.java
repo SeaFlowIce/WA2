@@ -2,12 +2,16 @@ package android.galgame.white_album_2.wa2;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +39,9 @@ public class PageFragment extends Fragment {
     private Integer[] myXiaochun;
     private Integer[] myMali;
     private Integer[] Photo;
+
+    public ImageView mImageGirls;
+
     public static PageFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
@@ -50,6 +57,25 @@ public class PageFragment extends Fragment {
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.e("onDestroy","onDestroy");
+        if(mImageGirls != null && mImageGirls.getDrawable() != null){
+            mImageGirls.setImageDrawable(null);
+//            Bitmap oldBitmap = ((BitmapDrawable) mImageGirls.getDrawable()).getBitmap();
+//
+//            if(oldBitmap != null){
+//
+//                oldBitmap.recycle();
+//
+//                oldBitmap = null;
+//
+//            }
+        }
+        System.gc();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_page, container, false);
@@ -61,7 +87,6 @@ public class PageFragment extends Fragment {
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), onItemClickListener));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        // specify an adapter (see also next example)
         myQiangjing = new Integer[]{R.drawable.wa2_qj01,R.drawable.wa2_qj02,R.drawable.wa2_qj03,R.drawable.wa2_qj04,R.drawable.wa2_qj05};
         myXuecai = new Integer[]{R.drawable.wa2_xuecai01,R.drawable.wa2_xuecai02,R.drawable.wa2_xuecai03,R.drawable.wa2_xuecai04,R.drawable.wa2_xuecai05};
         myDongma = new Integer[]{R.drawable.wa2_dongma01,R.drawable.wa2_dongma02,R.drawable.wa2_dongma03,R.drawable.wa2_dongma04,R.drawable.wa2_dongma05};
@@ -99,7 +124,6 @@ public class PageFragment extends Fragment {
         // you provide access to all the views for a data item in a view holder
         public class ViewHolder extends RecyclerView.ViewHolder {
             // each data item is just a string in this case
-            public ImageView mImageGirls;
 
             public ViewHolder(View v) {
                 super(v);

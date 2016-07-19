@@ -1,18 +1,23 @@
 package android.galgame.white_album_2.wa2;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.InputStream;
 
 public class GirlsActivity extends AppCompatActivity {
 
@@ -59,7 +64,7 @@ public class GirlsActivity extends AppCompatActivity {
     }
 
 
-    public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
+    public class SampleFragmentPagerAdapter extends FragmentStatePagerAdapter {
         final int PAGE_COUNT = 5;
         private String tabTitles[] = new String[]{"千晶","雪菜","冬马","小春","麻里"};
         private Context context;
@@ -94,6 +99,7 @@ public class GirlsActivity extends AppCompatActivity {
             return tabTitles[position];
         }
     }
+
 
 
 }
